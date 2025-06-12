@@ -1,0 +1,102 @@
+!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khám phá Việt Nam cùng Bảo</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f9f9f9;
+margin: 0;
+padding: 0;
+}
+header, footer {
+background-color: #2c3e50;
+color: white;
+text-align: center;
+padding: 1rem;
+}
+nav {
+background-color: #34495e;
+display: flex;
+justify-content: center;
+gap: 1rem;
+padding: 0.5rem;
+}
+nav a {
+color: white;
+text-decoration: none;
+padding: 0.5rem 1rem;
+background-color: #3c6382;
+border-radius: 5px;
+transition: background-color 0.3s;
+}
+nav a:hover {
+background-color: #60a3bc;
+}
+main {
+padding: 2rem;
+text-align: center;
+}
+section {
+display: none;
+}
+section.active {
+display: block;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Chào mừng đến với Website của Bảo</h1>
+</header>
+
+<nav>
+<a href="#" onclick="showPage(1)">Trang 1</a>
+<a href="#" onclick="showPage(2)">Trang 2</a>
+<a href="#" onclick="showPage(3)">Trang 3</a>
+<a href="#" onclick="showPage(4)">Trang 4</a>
+<a href="#" onclick="showPage(5)">Trang 5</a>
+</nav>
+
+<main>
+<section id="page1" class="active">
+<h2>Chào mừng đến với Website của Bảo</h2>
+<p>Cảm ơn bạn đã ghé thăm! Hãy cùng khám phá đất nước Việt Nam tuyệt vời nhé!</p>
+</section>
+
+<section id="page2">
+<h2>Địa lý Việt Nam</h2>
+<p>Việt Nam là một quốc gia hình chữ S nằm ở Đông Nam Á, với bờ biển dài hơn 3.200 km. Khí hậu nhiệt đới gió mùa, có núi, rừng, sông ngòi và nhiều danh lam thắng cảnh nổi tiếng như Vịnh Hạ Long, Phong Nha - Kẻ Bàng, Sapa, Đà Lạt...</p>
+</section>
+
+<section id="page3">
+<h2>Gái Việt Nam</h2>
+<p>Phụ nữ Việt Nam nổi tiếng với vẻ đẹp dịu dàng, thùy mị và duyên dáng. Tà áo dài truyền thống tôn lên nét đẹp mềm mại và thanh lịch, mang đậm bản sắc dân tộc.</p>
+</section>
+
+<section id="page4">
+<h2>Tính cách gái Việt Nam</h2>
+<p>Gái Việt thường hiền hậu, đảm đang, biết quan tâm và chăm sóc gia đình. Họ mạnh mẽ, kiên cường trong công việc, nhưng cũng đầy tình cảm và sâu sắc trong các mối quan hệ.</p>
+</section>
+
+<section id="page5">
+<h2>Lời chào tạm biệt</h2>
+<p>Bảo xin cảm ơn bạn đã đồng hành cùng hành trình nhỏ này. Mong rằng bạn đã cảm nhận được một phần vẻ đẹp của đất nước và con người Việt Nam. Hẹn gặp lại bạn trong những trang web sau! Chúc bạn luôn vui vẻ và thành công!</p>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2025 Bảo - Tự Do sáng tạo với tâm huyết</p>
+</footer>
+
+<script>
+function showPage(n) {
+const sections = document.querySelectorAll("main section");
+sections.forEach(sec => sec.classList.remove("active"));
+document.getElementById("page" + n).classList.add("active");
+}
+</script>
+</body>
+</html>
